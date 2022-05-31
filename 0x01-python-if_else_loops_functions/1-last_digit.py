@@ -13,5 +13,7 @@ while(number >= 0):
         print(f'Last digit of {number} is {last_digit} and is less than 6 and not 0')
         break
 else:
-    print(f'Last digit of {number} is {last_digit} and is less than 6 and not 0')
+    number = abs(number)
+    last_digit = number % 10
+    print(f'Last digit of -{number} is -{last_digit} and is less than 6 and not 0')
 
