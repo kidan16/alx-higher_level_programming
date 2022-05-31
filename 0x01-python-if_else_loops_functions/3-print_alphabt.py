@@ -1,4 +1,8 @@
 #!/usr/bin/python3
-for letra in range(ord('a'), ord('z') + 1):
-    if letra != ord('q') and letra != ord('e'):
-        print('{:c}'.format(letra), end='')
+letter = 97
+while (letter < 123):
+    if (letter == 101 or letter == 113):
+        letter += 1
+        continue
+    print("{}".format(chr(letter)), end='')
+    letter += 1

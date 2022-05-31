@@ -1,8 +1,7 @@
 #!/usr/bin/python3
-for uno in range(10):
-    for dos in range(10):
-        if uno < dos:
-            print('{:d}{:d}'.format(uno, dos), end='')
-            if uno < 8:
-                print(', ', end='')
-print()
+for i in range(9):
+    for j in range(1 + i, 10):
+        if (i == 8):
+            break
+        print("{}{}".format(i, j), end=", ")
+print("89")

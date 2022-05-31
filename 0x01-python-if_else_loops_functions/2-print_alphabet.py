@@ -1,3 +1,5 @@
 #!/usr/bin/python3
-for letra in range(ord('a'), ord('z') + 1):
-    print('{:c}'.format(letra), end='')
+letter = 97
+while (letter < 123):
+    print("{}".format(chr(letter)), end='')
+    letter += 1
