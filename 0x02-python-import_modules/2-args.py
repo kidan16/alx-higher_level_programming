@@ -1,11 +1,16 @@
 #!/usr/bin/python3
 from sys import argv
-if __name__ == "__main__":
+
+
+def principal():
+    print('{} argument'.format(len(argv) - 1), end='')
     if len(argv) == 1:
-        separetor = "."
+        print('s.')
+    elif len(argv) == 2:
+        print(':')
     else:
-        separetor = ":"
-    print("{} arguments{}".format(len(argv) - 1, separetor))
-    if len(argv) > 1:
-       for i in range(1, len(argv)):
-            print('{}: {}'.format(i, argv[i]))
+        print('s:')
+    for i in range(1, len(argv)):
+        print('{}: {}'.format(i, argv[i]))
+if __name__ == "__main__":
+    principal()
