@@ -1,8 +1,10 @@
 #!/usr/bin/python3
+import sys
 import hidden_4
-def principal():
-    for i in dir(hidden_4):
-        if not (i[0] == '_' and i[1] == '_'):
-            print(i)
-if __name__ == "__main__":
-    principal()
+if __name__ == '__main__':
+    wordKeys = dir(hidden_4)
+    lenwords = len(wordKeys)
+
+    for i in range(lenwords):
+        if wordKeys[i][0] != '_':
+            print(wordKeys[i])
