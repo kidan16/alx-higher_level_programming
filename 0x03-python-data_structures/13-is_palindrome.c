@@ -1,6 +1,7 @@
 #include <stdlib.h>
+#include <stdio.h>
 #include "lists.h"
-
+#include <string.h>
 /**
  * is_palindrome - checks a list is a palindrome or not
  * @head: a pointer to a pointer to the first element
