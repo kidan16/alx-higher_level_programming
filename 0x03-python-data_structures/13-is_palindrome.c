@@ -2,35 +2,35 @@
 #include "lists.h"
 
 /**
- * is_palindrome - Return is a list s palindrome or not
- * @head:  double ponter to head
+ * is_palindrome - checks a list is a palindrome or not
+ * @head: a pointer to a pointer to the first element
  *
- * Return: 1 on success
+ * Return: 0 if it is not a palindrome, 1 if it is a palindrome
  */
 int is_palindrome(listint_t **head)
 {
 	listint_t *current;
-	int count, i;
-	int nums[10000];
+	int i, j = 0;
+	int List[];
 
 	current = *head;
-	count = 0;
 
 	if (*head == NULL)
 		return (1);
 
-	while (current != NULL)
+	while (current -> next != NULL)
 	{
-		nums[count] = current->n;
+		List[j] = current->n;
 		current = current->next;
-		count++;
+		j++;
 	}
+	List[j] = current->n;
 
-	for (i = 0; i < count; i++)
+	for (i = 0, j; i < j; i++, j--)
 	{
-		if (nums[i] == nums[count - 1])
-			count--;
-		else
+		if (List[i] != List[j])
 			return (0);
-	} return (1);
+	} 
+
+	return (1);
 }
