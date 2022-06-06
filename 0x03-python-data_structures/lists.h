@@ -23,7 +23,3 @@ void free_listint(listint_t *head);
 int is_palindrome(listint_t **head);
 
 #endif /* LISTS_H */
-© 2022 GitHub, Inc.
-Terms
-Privacy
-
