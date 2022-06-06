@@ -1,7 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "lists.h"
-#include <string.h>
 /**
  * is_palindrome - checks a list is a palindrome or not
  * @head: a pointer to a pointer to the first element
@@ -11,27 +10,39 @@
 int is_palindrome(listint_t **head)
 {
 	listint_t *current;
-	int i, j = 0;
-	int List[];
+	listint_t *fill;
+	int i, j = 0, v = 0;
+	int *array;
 
 	current = *head;
+	fill = *head;
 
 	if (*head == NULL)
 		return (1);
 
-	while (current -> next != NULL)
+	while (current->next != NULL)
 	{
-		List[j] = current->n;
 		current = current->next;
 		j++;
 	}
-	List[j] = current->n;
+
+	array = malloc(sizeof(int) * (j + 2));
+	if (array == NULL)
+		return (NULL);
+
+	while (fill->next != NULL)
+	{
+		array[v] = fill->n;
+		fill = fill->next;
+		v++;
+	}
+	array[v] = fill->n;
 
 	for (i = 0, j; i < j; i++, j--)
 	{
-		if (List[i] != List[j])
+		if (array[i] != array[j])
 			return (0);
-	} 
+	}
 
 	return (1);
 }
