@@ -5,11 +5,9 @@ def roman_to_int(roman_string):
     if roman_string == None:
         return 0
     roman = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
-
     number = 0
     for _char in roman_string:
         number += roman[_char]
-
     value = []
     for char in roman_string:
         value.append(roman[char])
@@ -19,5 +17,4 @@ def roman_to_int(roman_string):
         if num > nump:
             number -= 2 * nump
         j += 1
-
     return number
