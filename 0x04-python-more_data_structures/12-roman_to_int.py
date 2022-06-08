@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
-    if type(roman_string) != str:
+    if (not isinstance(roman_string, str)):
         return 0
     if roman_string == None:
         return 0
@@ -13,8 +13,8 @@ def roman_to_int(roman_string):
     value = []
     for char in roman_string:
         value.append(roman[char])
+    j = 0
     for num in value[1:]:
-        j = 0
         nump = value[j]
         if num > nump:
             number -= 2 * nump
