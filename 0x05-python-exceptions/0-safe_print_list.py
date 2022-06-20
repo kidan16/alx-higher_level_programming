@@ -4,6 +4,6 @@ def safe_print_list(my_list=[], x=0):
         try:
             print('{:d}'.format(my_list[y]), end="")
         except (IndexError, TypeError, ValueError):
-            pass
+            return
     print("")
-    return y + 1
+    return (y + 1)
