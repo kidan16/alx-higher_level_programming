@@ -6,4 +6,4 @@ def safe_print_list(my_list=[], x=0):
         except (IndexError, TypeError, ValueError, NameError):
             break
     print("")
-    return y + 1
+    return (y + 1)
