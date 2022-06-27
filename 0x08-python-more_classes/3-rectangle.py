@@ -49,12 +49,13 @@ class Rectangle:
         return 2 * (self.__width + self.__height)
 
     def __str__(self):
-        rect = []
         if self.__width == 0 or self.__height == 0:
             return ("")
+
+        rect = []
         else:
             for row in range(self.__height):
                 for column in range(self.__width):
                     rect.append("#")
                 rect.append('\n')
-        return "".join(rect)
+        return ("".join(rect))
