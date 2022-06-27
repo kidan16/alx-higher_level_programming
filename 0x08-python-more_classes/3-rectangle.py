@@ -57,4 +57,4 @@ class Rectangle:
                 for column in range(self.width):
                     rect.append("#")
                 rect.append('\n')
-        return rect
+        return "".join(rect)
