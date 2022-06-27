@@ -57,5 +57,6 @@ class Rectangle:
         for row in range(self.__height):
             for column in range(self.__width):
                 rect.append("#")
-            rect.append("\n")
+            if row != self.__height - 1:
+                rect.append("\n")
         return "".join(rect)
