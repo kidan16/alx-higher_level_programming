@@ -10,7 +10,7 @@ class Rectangle:
         """Instantiation with optional width and height
         Args:
             width : The width of the rectangle.
-            height: The height of the rectangle.    
+            height: The height of the rectangle.
         """
 
         self.width = width
