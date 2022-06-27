@@ -11,9 +11,7 @@ class Rectangle:
             width : The width of the rectangle.
             height: The height of the rectangle.
         """
-
-
-
+        
         self.width = width
         self.height = height
 
