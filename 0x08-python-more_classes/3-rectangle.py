@@ -50,11 +50,11 @@ class Rectangle:
 
     def __str__(self):
         rect = []
-        if self.__width == 0 or self.__height == 0:
+        if self.width == 0 or self.height == 0:
             return ""
         else:
-            for row in range(self.__height):
-                for column in range(self.__width):
+            for row in range(self.height):
+                for column in range(self.width):
                     rect.append("#")
                 rect.append('\n')
         return rect
