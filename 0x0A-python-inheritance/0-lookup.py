@@ -1,5 +1,9 @@
 #!/usr/bin/python3
-
+"""
+Module 0-lookup
+list of available attributes
+and methods
+"""
 def lookup(obj):
-    """ lists available attributes """
+    """ list available attributes """
     return dir(obj)
