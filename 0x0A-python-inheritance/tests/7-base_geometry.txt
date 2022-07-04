@@ -1,45 +1,95 @@
-# run test with python3 -m doctest -v ./tests/0-add_integer.txt
+# run test with python3 -m doctest -v ./tests/[filename].txt
 
 First import method to test
->>> MyList = __import__('1-my_list').MyList
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
-Success cases:
+SUCCESS CASES:
 
-Test with numbers:
+Test ints greater than 0 (shouldn't raise error or return anything):
+     >>> bg = BaseGeometry()
+     >>> bg.integer_validator("checkme", 999)
 
-     >>> m1 = MyList()
-     >>> m1.append(4)
-     >>> m1.append(1)
-     >>> m1.append(2)
-     >>> m1.append(7)
-     >>> m1.append(3)
-     >>> m1.append(-1)
+FAIL CASES:
 
-     >>> m1
-     [4, 1, 2, 7, 3, -1]
-     >>> m1.print_sorted()
-     [-1, 1, 2, 3, 4, 7]
-     >>> m1
-     [4, 1, 2, 7, 3, -1]
+Test non-implemented area method
+     >>> bg = BaseGeometry()
+     >>> bg.area()
+     Traceback (most recent call last):
+     ...
+     Exception: area() is not implemented
 
-Test with empty list:
+Test ints less than or equal to 0:
+     >>> bg = BaseGeometry()
+     >>> bg.integer_validator("checkme", 0)
+     Traceback (most recent call last):
+     ...
+     ValueError: checkme must be greater than 0
 
-     >>> m = MyList()
-     >>> m.print_sorted()
-     []
+     >>> bg = BaseGeometry()
+     >>> bg.integer_validator("checkme", -999)
+     Traceback (most recent call last):
+     ...
+     ValueError: checkme must be greater than 0
 
-Test type, isinstance, issubclass:
-     >>> type(MyList())
-     <class '1-my_list.MyList'>
+Test non-ints:
 
-     >>> isinstance(MyList, object)
-     True
+     >>> bg = BaseGeometry()
+     >>> bg.integer_validator("checkme", None)
+     Traceback (most recent call last):
+     ...
+     TypeError: checkme must be an integer
 
-     >>> isinstance(MyList, list)
-     False
+     >>> bg = BaseGeometry()
+     >>> bg.integer_validator("checkme", "hello!")
+     Traceback (most recent call last):
+     ...
+     TypeError: checkme must be an integer
 
-     >>> issubclass(MyList, list)
-     True
+     >>> bg = BaseGeometry()
+     >>> bg.integer_validator("checkme", "50")
+     Traceback (most recent call last):
+     ...
+     TypeError: checkme must be an integer
 
-     >>> 'print_sorted' in dir(MyList)
-     True
+     >>> bg = BaseGeometry()
+     >>> bg.integer_validator("checkme", [1, 2, 3])
+     Traceback (most recent call last):
+     ...
+     TypeError: checkme must be an integer
+
+     >>> bg = BaseGeometry()
+     >>> bg.integer_validator("checkme", (1, 2, 3))
+     Traceback (most recent call last):
+     ...
+     TypeError: checkme must be an integer
+
+     >>> bg = BaseGeometry()
+     >>> bg.integer_validator("checkme", {"key": 1})
+     Traceback (most recent call last):
+     ...
+     TypeError: checkme must be an integer
+
+     >>> bg = BaseGeometry()
+     >>> bg.integer_validator("age", True)
+     Traceback (most recent call last):
+     ...
+     TypeError: age must be an integer
+
+     >>> bg = BaseGeometry()
+     >>> bg.integer_validator("checkme", {3, 4})
+     Traceback (most recent call last):
+     ...
+     TypeError: checkme must be an integer
+
+Test invalid number of arguments:
+     >>> bg = BaseGeometry()
+     >>> bg.integer_validator()
+     Traceback (most recent call last):
+     ...
+     TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+     >>> bg = BaseGeometry()
+     >>> bg.integer_validator("age")
+     Traceback (most recent call last):
+     ...
+     TypeError: integer_validator() missing 1 required positional argument: 'value'
