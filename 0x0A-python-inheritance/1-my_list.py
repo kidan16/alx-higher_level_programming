@@ -1,9 +1,6 @@
 #!/usr/bin/python3
 """
 Module 1-my_list
-class: MyList
-Inherited from: list
-MyList has public instance method: print_sorted
 """
 
 
