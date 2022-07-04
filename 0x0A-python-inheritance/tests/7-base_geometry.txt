@@ -28,7 +28,7 @@ Test ints less than or equal to 0:
      ValueError: checkme must be greater than 0
 
      >>> bg = BaseGeometry()
-     >>> bg.integer_validator("checkme", -999)
+     >>> bg.integer_validator("checkme", -1616)
      Traceback (most recent call last):
      ...
      ValueError: checkme must be greater than 0
