@@ -1,4 +1,4 @@
-# run test with python3 -m doctest -v ./tests/[filename].txt
+# run test with python3 -m doctest -v ./tests/7-base_geometry.txt
 
 
 
