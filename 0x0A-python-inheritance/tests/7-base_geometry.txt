@@ -1,7 +1,3 @@
-# run test with python3 -m doctest -v ./tests/7-base_geometry.txt
-
-
-
 First import method to test
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
@@ -31,6 +27,7 @@ Test ints less than or equal to 0:
      >>> bg.integer_validator("checkme", -1616)
      Traceback (most recent call last):
      ...
+
      ValueError: checkme must be greater than 0
 
 Test non-ints:
