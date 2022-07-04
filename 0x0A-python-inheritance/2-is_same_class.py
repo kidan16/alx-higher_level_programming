@@ -1,6 +1,9 @@
 #!/usr/bin/python3
-def is_same_class(obj, a_class):
-    if type(obj) == a_class:
-        return True
+"""
+Module 2-is_same_class.py
+"""
 
-    return False
+
+def is_same_class(obj, a_class):
+    """ returns exactly an instance of the specified class """
+    return type(obj) == 
