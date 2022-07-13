@@ -9,6 +9,7 @@ from models.base import Base
 class Rectangle(Base):
     """A representation of a rectangle"""
     def __init__(self, width, height, x=0, y=0, id=None):
+        """Class constructor"""
         super().__init__(id=None)
         self.width = width
         self.height = height
@@ -17,10 +18,12 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """Getter method for width"""
         return self.__width
 
     @width.setter
     def width(self, value):
+        """Setter method for width"""
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -29,10 +32,12 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        """Getter method for height"""
         return self.__height
 
     @height.setter
     def height(self, value):
+        """Setter method for height"""
         if type(value) is not int:
             raise TypeError("height must be an integer")
         if value <= 0:
@@ -41,10 +46,12 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        """Getter method for x"""
         return self.__x
 
     @x.setter
     def x(self, value):
+        """Setter method for x"""
         if type(value) is not int:
             raise TypeError("x must be an integer")
         if value <= 0:
@@ -53,10 +60,12 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        """Getter method for y"""
         return self.__y
 
     @y.setter
     def y(self, value):
+        """Setter method for y"""
         if type(value) is not int:
             raise TypeError("y must be an integer")
         if value <= 0:
@@ -64,9 +73,11 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
+        """Calculates area of the rectangle"""
         return self.width * self.height
 
     def display(self):
+        """Prints a Rectangle instance with the character # """
         for y_unit in range(self.y):
             print()
         for row in range(self.height):
@@ -76,11 +87,13 @@ class Rectangle(Base):
             print()
 
     def __str__(self):
+        """Overrides the __str__ method"""
         str1 = f"[Rectangle] ({self.id}) {self.x}/{self.y} - "
         str2 = f"{self.width}/{self.height}"
         return str1 + str2
 
     def update(self, *args, **kwargs):
+        """Updates the Rectangle"""
         if args != none:
             for j in range(len(args)):
                 if j == 0:
@@ -108,6 +121,7 @@ class Rectangle(Base):
                     self.y = kwargs["y"]
 
     def to_dictionary(self):
+        """Returns the dictionary representation of a Rectangle"""
         dict_x = {"x": self.x}
         dict_y = {"y": self.y}
         dict_id = {"id": self.id}
