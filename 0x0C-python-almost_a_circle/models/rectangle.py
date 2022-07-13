@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """
-Contains the "Rectangle" class
+Module: rectangle
+Class: Rectangle
+Inherited class: Base
 """
 
 from models.base import Base
@@ -8,6 +10,7 @@ from models.base import Base
 
 class Rectangle(Base):
     """A representation of a rectangle"""
+    
     def __init__(self, width, height, x=0, y=0, id=None):
         """Class constructor"""
         super().__init__(id=None)
