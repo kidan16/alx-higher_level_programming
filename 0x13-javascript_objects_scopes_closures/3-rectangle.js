@@ -19,7 +19,7 @@ module.exports = class Rectangle {
       }
 
       if (j === this.width) {
-        console.log('');
+        console.log('\n');
       }
     }
   }
