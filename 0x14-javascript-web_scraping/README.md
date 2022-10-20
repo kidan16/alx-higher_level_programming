@@ -259,7 +259,6 @@ https://t.co/ZLIvgZoC5I
 #cisfun https://t.co/I1tc1iR5g2 by Mustafa ugurlu
 [855594028397584400] @julienbarbier42 #neverforget
 
-@sophie_rb42
 @holbertonschool 
 #cisfun
 #lol https://t.co/WSiZFW8bgg by MJohnson
